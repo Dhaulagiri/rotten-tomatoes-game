@@ -5,7 +5,7 @@ import {
 
 moduleForModel('movie', 'Movie', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:actor']
 });
 
 test('it exists', function() {

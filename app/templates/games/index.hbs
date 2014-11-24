@@ -1,7 +1,7 @@
 <h3>Games Index</h3>
 
 {{#each}}
-  {{name}}<br/>
+  <p>{{#link-to 'games.show' this}}{{name}}{{/link-to}}</p>
 {{/each}}
 
 <p><button type="button" class="btn btn-default" {{action "createGame" this}}>Create A Game</button></p>

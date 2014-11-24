@@ -5,7 +5,7 @@ import {
 
 moduleForModel('game', 'Game', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:player']
 });
 
 test('it exists', function() {
