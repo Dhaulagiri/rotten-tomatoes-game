@@ -5,6 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'rotten-tomatoes-game',
     environment: environment,
     baseURL: '/',
+    firebase_instance: 'rotten-tomatoes-game',
+    rotten_tomatoes_key: '8hu4t4gbdahjkhaf6txg6276',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

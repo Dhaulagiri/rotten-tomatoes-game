@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('adapter:application', 'ApplicationAdapter', {
+moduleFor('adapter:firebase', 'FirebaseAdapter', {
   // Specify the other units that are required for this test.
   // needs: ['serializer:foo']
 });

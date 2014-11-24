@@ -10,12 +10,12 @@ export default DS.RESTAdapter.extend({
     hash.crossDomain = true;
     hash.xhrFields = { withCredentials: true };
     hash.data = {
-      apikey: config.rotten.key
+      apikey: config.rotten_tomatoes_key
     };
     hash.dataType = 'jsonp';
     hash.callback = '?';
 
-    url = url + "?callback=?"
+    url = url + "?callback=?";
 
     return this._super(url, method, hash).then(function(json) {
       return { movie: [json] };

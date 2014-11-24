@@ -1,5 +1,3 @@
-import ApplicationAdapter from './application';
+import RottenTomatoesAdapter from './rotten-tomatoes';
 
-export default ApplicationAdapter.extend({
-
-});
+export default RottenTomatoesAdapter.extend();
