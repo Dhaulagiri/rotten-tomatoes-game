@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "bootstrap": "~3.3.1",
-    "bootswatch": "~3.3.1+2",
+    "bootswatch": "~3.3.1",
     "firebase": "~2.0.4",
     "emberfire": "~1.3.1"
   }
