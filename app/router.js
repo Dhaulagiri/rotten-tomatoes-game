@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  
   this.resource('movies', function() {
     this.route('show', {path: ':movie_id'});
   });
@@ -15,9 +16,7 @@ Router.map(function() {
   this.resource('players', function() {
     this.route('show', {path: ':player_id'});
   });
-  //this.resource('game', { path: 'games/:game_id' }, function() { });
-  this.route('movies/show');
-  this.route('games/show');
+
 });
 
 export default Router;

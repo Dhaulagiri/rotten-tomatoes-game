@@ -1,3 +1,12 @@
 <h3>Players Index</h3>
 
+<div class="row">
+	{{input value=player.name placeholder="Name"}}
+	<button {{action "createPlayer"}} class="btn btn-primary">Create Player</button>
+</div>
+
+{{#each}}
+	<p>{{#link-to 'players.show' this}}{{name}}{{/link-to}}</p>
+{{/each}}
+
 {{outlet}}
