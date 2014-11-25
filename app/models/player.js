@@ -3,5 +3,5 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
 
-  games: DS.hasMany('game')
+  games: DS.hasMany('game', { async: true })
 });
