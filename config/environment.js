@@ -18,6 +18,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'frame-src': "https://*.firebaseio.com",
+      //'script-src': "'self' http://*.rottentomatoes.com",
+      'font-src': "'self' http://*.gstatic.com",
+      'style-src': "'self' http://*.googleapis.com",
+      //'content_security_policy': "script-src 'self' 'unsafe-eval'; object-src 'self'"
     }
   };
 
