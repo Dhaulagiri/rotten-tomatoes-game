@@ -1,8 +1,14 @@
-<h3>Player {{name}}<h3>
+<h3 class='text-center'>Player {{name}}</h3>
 
-<h4>Games</h4>
-{{#each this.games}}
-	<p>{{#link-to 'player.game' this}}{{id}}{{/link-to}}</p>
-{{/each}}
+<div class="row">
+	<div class="col-md-2">
+		<h4>Games</h4>
+		{{#each this.games}}
+			<p>{{#link-to 'player.game' this}}{{id}}{{/link-to}}</p>
+		{{/each}}
+	</div>
 
-{{outlet}}
+	<div class="col-md-10">
+		{{outlet}}
+	</div>
+</div>
