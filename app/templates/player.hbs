@@ -1,0 +1,8 @@
+<h3>Player {{name}}<h3>
+
+<h4>Games</h4>
+{{#each this.games}}
+	<p>{{#link-to 'player.game' this}}{{id}}{{/link-to}}</p>
+{{/each}}
+
+{{outlet}}

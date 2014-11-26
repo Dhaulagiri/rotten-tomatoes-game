@@ -2,10 +2,10 @@
 
 <h4>Players</h4>
 {{#each this.players}}
-	<p>{{name}}</p>
+	<p>{{#link-to 'player' this}}{{name}}{{/link-to}}</p>
 {{/each}}
 
 <h4>Movies</h4>
 {{#each this.movies}}
-	<p>{{title}}</p>
+	<p>{{#link-to 'movies.show' this}}{{title}}{{/link-to}}</p>
 {{/each}}
