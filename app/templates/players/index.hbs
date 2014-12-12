@@ -1,5 +1,5 @@
 <h3>Players Index</h3>
-
+	{{#link-to 'players.new' tagName="button" classNames="btn btn-primary" href=false}}Add New Player{{/link-to}}
 {{#each}}
 	<p>{{#link-to 'player' this}}{{name}}{{/link-to}}</p>
 {{/each}}
