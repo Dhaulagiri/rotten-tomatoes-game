@@ -1,4 +1,9 @@
-<div class="row">
-  {{input value=player.name placeholder="Name"}}
-  <button {{action "createPlayer"}} class="btn btn-primary">Create Player</button>
+<div class="row text-center">
+  <h2>Create A Player</h2>
+</div>
+<div class="row text-center">
+  {{input value=player.name placeholder="Enter Your Name"}}
+</div>
+<div class="row text-center">
+  <button {{action "createPlayer"}} class="btn btn-primary btn-lg">Create Player</button>
 </div>
