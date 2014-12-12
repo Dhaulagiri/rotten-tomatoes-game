@@ -3,13 +3,13 @@
 		<h4>Movies</h4>
 		{{#each this.movies}}
 			<div class="media">
+				{{#link-to 'movies.show' this classNames="media-left"}}
+						<img {{bind-attr src=thumbnail alt=title}}>
+				{{/link-to}}
 				<div class="media-body">
 			    <h4 class="media-heading">{{title}} - {{year}}</h4>
 			    	{{synopsis}}
 			  </div>
-			  {{#link-to 'movies.show' this classNames="media-right media-middle"}}
-			    	<img {{bind-attr src=thumbnail alt=title}}>
-			  {{/link-to}}  
 			</div>
 		{{/each}}
 	</div>

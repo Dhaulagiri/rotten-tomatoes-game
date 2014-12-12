@@ -4,5 +4,6 @@ export default DS.Model.extend({
   name: DS.attr('string'),
 
   movies: DS.hasMany('movie', { async: true }),
-  players: DS.hasMany('player', { async: true })
+  players: DS.hasMany('player', { async: true }),
+  rounds: DS.hasMany('round', { async: true })
 });
