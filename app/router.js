@@ -33,6 +33,9 @@ Router.map(function() {
       });
     });
   });
+
+  this.resource('presets', function() {
+  });
 });
 
 export default Router;

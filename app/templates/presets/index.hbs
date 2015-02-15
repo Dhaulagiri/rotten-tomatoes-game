@@ -1,0 +1,12 @@
+<h3>Game Sets Index</h3>
+
+{{#each preset in model}}
+  <p>{{preset.name}}</p>
+  <ul>
+    {{#each movie in preset.movies}}
+      <li>{{movie.title}}</li>
+    {{/each}}
+  </ul>
+{{/each}}
+
+{{outlet}}
