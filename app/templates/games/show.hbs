@@ -1,7 +1,5 @@
 <h3>Game {{name}}<h3>
 
-<p><button type="button" class="btn btn-primary" {{action "startGame" this}}>Start Game</button></p>
-
 <h4>Players</h4>
 {{#each this.players}}
 	<p>{{#link-to 'player' this}}{{name}}{{/link-to}}</p>

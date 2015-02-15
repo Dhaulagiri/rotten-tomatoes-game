@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  controllerName: 'players/new',
+  controllerName: 'games/new',
   renderTemplate: function() {
-    this.render('players/new');
+    this.render('games/new');
   }
 });
