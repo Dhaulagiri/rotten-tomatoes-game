@@ -9,6 +9,6 @@ export default Ember.Route.extend({
       dataType: 'jsonp'
     }).then(function(movies){
       return movies;
-    })
+    });
   }
 });

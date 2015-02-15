@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   actions: {
     startGame: function(game) {
-      debugger
+      //debugger
       var that = this;
       var store = this.get('store');
 

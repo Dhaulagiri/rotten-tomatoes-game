@@ -5,11 +5,11 @@ import {
 
 moduleForModel('player', 'Player', {
   // Specify the other units that are required for this test.
-  needs: ['model:game', 'model:movie', 'model:actor']
+  needs: ['model:game', 'model:movie', 'model:actor', 'model:round']
 });
 
-test('it exists', function() {
+test('it exists', function(assert) {
   var model = this.subject();
   // var store = this.store();
-  ok(!!model);
+  assert.ok(!!model);
 });
