@@ -13,8 +13,10 @@ Router.map(function() {
   });
 
   this.resource("games", function() {
-    this.route("show", {
-      path: ":game_id"
+    this.route("show", { path: ":game_id" }, function() {
+      // this.route("round", {
+      //   path: "rounds/:round_id"
+      // });
     });
 
     this.route("new");

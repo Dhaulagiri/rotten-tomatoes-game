@@ -1,11 +1,10 @@
-<h3>Game {{name}}</h3>
+<h2 class="text-center">Game {{name}}</h2>
 
-<h4>Players</h4>
-{{#each this.players}}
-	<p>{{#link-to 'player' this}}{{name}}{{/link-to}}</p>
+<h3 class="text-center">Your Score: {{score}}</h3>
+
+<h3>The Movies</h3>
+{{#each round in this.rounds}}
+	{{movie-round round=round}}
 {{/each}}
 
-<h4>Movies</h4>
-{{#each this.movies}}
-	<p>{{#link-to 'movies.show' this}}{{title}}{{/link-to}}</p>
-{{/each}}
+<p><button type="button" class="btn btn-primary" {{action "submit" this}}>Submit</button></p>

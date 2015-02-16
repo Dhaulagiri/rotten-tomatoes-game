@@ -1,4 +1,12 @@
 <br />
 <div class="row text-center">
+  <p>
+    {{view "select"
+       content=presets
+       optionValuePath="content.id"
+       optionLabelPath="content.name"
+       selection=selectedPreset
+       prompt="Please select a preset"}}
+  </p>
   <p><button type="button" class="btn btn-primary" {{action "startGame" this}}>Start A Game</button></p>
 </div>

@@ -1,48 +1,60 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+  selectedPreset: null,
+  presets: function(){
+    return this.store.find('preset');
+  }.property(),
   actions: {
     startGame: function(game) {
-      //debugger
       var that = this;
       var store = this.get('store');
-
+      var _movies = that.get("selectedPreset")._data.movies;
+      // Create the game
       game = store.createRecord('game', {
-        name: 'Test'
+        name: Date.now()
       }).save().then(function(game) {
-        that.transitionToRoute('games.show', game);
+        // Get its movie array
+        game.get('movies').then(function(movies) {
+          // Grab all the movies from the selected item
+          // TODO - This does not seem correct
+          debugger
+          // Add each movie to the game's movie array
+          _movies.forEach(function(m) {
+              movies.addObject(m);
+          });
+
+          // create a round per movie
+          game.get('rounds').then(function(rounds) {
+            var counter = 1;
+            debugger;
+            _movies.forEach(function(m) {
+
+              var round = store.createRecord('round', {
+                roundNumber: counter,
+                guess: 0
+              });
+              round.set('game', game);
+              round.set('movie', m);
+              round.save();
+              rounds.addObject(round);
+
+              counter += 1;
+            });
+
+            // Save the game and transition to the game
+            game.save().then(function() {
+              that.transitionToRoute('games.show', game);
+              // var firstRound = game.get('rounds').get('firstObject');
+              // that.transitionTo('games.show.round', game, firstRound);
+            });
+          });
+
+
+
+        });
+
       });
-
-
-      // this.get('movies').then(function(movies) {
-      //   movies.addObject(1);
-      //   game.save();
-      // });
-
-
-      // validate and exit if needed
-
-      // this.get('movies').then(function(movies) {
-      //   // movies.content.length
-      //   for (var index = 0; index < 2; ++index) {
-      //     var movie = movies.content[index];
-      //     var round = store.createRecord('round', {
-      //       movie: movie,
-      //       number: index + 1,
-      //       game: game
-      //     });
-      //
-      //     round.save().then(function() {
-      //       game.get('rounds').then(function(rounds){
-      //         rounds.addObject(round);
-      //         game.save().then(function() {
-      //           round.save();
-      //         });
-      //       });
-      //     });
-      //   }
-      // });
     }
-
   }
 });
